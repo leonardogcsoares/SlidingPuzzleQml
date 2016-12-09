@@ -17,14 +17,16 @@ public:
 
     int index();
 
+    int mValue;
+    int mIndex;
+
 signals:
     void valueChanged();
 
 public slots:
 
 private:
-    int mValue;
-    int mIndex;
+
 
 };
 

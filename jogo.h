@@ -5,6 +5,9 @@
 #include <QList>
 #include <QQuickView>
 #include <QUrl>
+#include "gamemodel.h"
+
+#define TAM 4
 
 class Jogo : public QObject
 {
@@ -13,17 +16,20 @@ public:
     explicit Jogo(QObject *parent = 0);
     Jogo(QUrl url);
     Q_INVOKABLE void cellClicked(int value, int index);
-    static QList<QObject*> getDataList();
+    QList<QObject*> refreshDataList();
 signals:
 
 public slots:
+    void refresh();
 //    void saveClicked();
 //    void loadClicked();
 
 private:
-    static QList<QObject*> mDataList;
+    int currentMatrix[TAM][TAM];
+    GameModel *mArray[TAM][TAM];
     QQuickView mView;
     QQmlContext *mCtxt;
+    int test;
 };
 
 #endif // JOGO_H

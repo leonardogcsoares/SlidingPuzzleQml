@@ -44,6 +44,7 @@ Window {
 
 //                                 rectangle1.qmlSignal("" + model.modelData.value);
                                 jogo.cellClicked(model.modelData.value, model.modelData.index);
+//                                jogoBase.refresh()
                             }
                         }
                     }

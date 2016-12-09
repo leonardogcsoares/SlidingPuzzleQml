@@ -6,7 +6,8 @@ CONFIG += c++11
 SOURCES += main.cpp \
     gamemodel.cpp \
     mytable.cpp \
-    jogo.cpp
+    jogo.cpp \
+    abstractgamemodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -21,4 +22,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     gamemodel.h \
     mytable.h \
-    jogo.h
+    jogo.h \
+    abstractgamemodel.h
