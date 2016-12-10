@@ -4,10 +4,9 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    gamemodel.cpp \
     mytable.cpp \
     jogo.cpp \
-    abstractgamemodel.cpp
+    block.cpp
 
 RESOURCES += qml.qrc
 
@@ -20,7 +19,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    gamemodel.h \
     mytable.h \
     jogo.h \
-    abstractgamemodel.h
+    block.h
